@@ -54,13 +54,3 @@ public:
 
 
 
-int main(){
-    SetWindow(XX,YY);
-    Bar check;
-    check.genrateBar();
-    while (true)
-    check.control();
-    
-
-    return(0);
-}

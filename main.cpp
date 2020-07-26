@@ -1,14 +1,13 @@
 #include <iostream>
 #include <windows.h>
 #include "ScreenEdit.cpp"
+#include "bar.cpp"
 using namespace std;
 
 int main(){
 
-    SetWindow(X,Y);
-    cout<<"hello";
-    system("pause");
-
+    SetWindow(XX,YY);
+  
     
     
     return(0);
