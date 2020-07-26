@@ -1,0 +1,43 @@
+Noun----> class
+Is -----> Inheritance
+Has  -------> composition
+Verb -------> function/method
+Brick Stone
+Structures
+Stone/ball
+Bar
+Bricks
+Game methodology
+Menu(Winning and Loosing )
+Score chart
+User Life/status
+Resources
+Map (Stone ,bar , Bricks, Level, Balls Powers )
+
+Classes and functions
+Maps
+Ball 
+Bounce
+Back/Fall/drop
+Hit / collides (up, down, right, left)
+Ball(Stone)_ Abilities (Power 2X i.e color ...)
+
+Bar
+Moving (left and right)
+abilities
+Brick
+Collide
+Abilities(i.e soft, hard, strong)
+Levels
+Load level
+Current level
+Status
+Life
+Score (Reset score when loss a life)
+Current Level 
+Player
+Evaluation
+
+Composition / Inheritance
+Maps Composite with brickstone    
+                           
