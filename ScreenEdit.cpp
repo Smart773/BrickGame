@@ -1,5 +1,5 @@
 #include<windows.h>
-int X=65,Y=75;
+int XX=115,YY=35;
 void SetWindow(int Width, int Height)
     {
     _COORD coord;
@@ -23,5 +23,5 @@ void gotoxy(int x, int y)
   coord.X = x;
   coord.Y = y;
   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-  
+
 }

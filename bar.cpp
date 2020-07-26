@@ -6,14 +6,13 @@ class Bar
 {
 private:
     int location[2];
-    int move;
     bool collide;
     string bar;
     string wipe;
 public:
     Bar(){
-        location[0]=63;    
-        location[1]=75/2;
+        location[0]=XX/2;    
+        location[1]=YY-(2);
         bar="##########";    
         wipe="          ";    
     }
@@ -22,7 +21,16 @@ public:
         gotoxy(location[0],location[1]);
         cout<<bar;
     }
+        void move(int p){
+        if(0<=location[0]+p && (XX-10)>=location[0]+p){
+        gotoxy(location[0],location[1]);
+        cout<<wipe;
+        location[0]+=p;
+        gotoxy(location[0],location[1]);
+        cout<<bar;
+        }
 
+        }
     void control(){
         if(kbhit())
         switch (getch())
@@ -30,9 +38,11 @@ public:
         case 'a':
         case 'A':
             //move left .....
+            move(-1);
             break;
-        case 's':
-        case 'S':
+        case 'd':
+        case 'D':
+            move(+1);
             //move Right .....
             break;
         default:
@@ -45,7 +55,12 @@ public:
 
 
 int main(){
-
+    SetWindow(XX,YY);
+    Bar check;
+    check.genrateBar();
+    while (true)
+    check.control();
+    
 
     return(0);
 }
