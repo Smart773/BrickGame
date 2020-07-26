@@ -12,7 +12,7 @@ private:
 public:
     Bar(){
         location[0]=XX/2;    
-        location[1]=YY-(2);
+        location[1]=YY-2;
         bar="##########";    
         wipe="          ";    
     }
