@@ -25,3 +25,28 @@ void gotoxy(int x, int y)
   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 
 }
+
+
+
+char getCursorChar()    /// Function which returns character on console's cursor position || Totally not copied from the Internet
+{
+    char c = '\0';
+    CONSOLE_SCREEN_BUFFER_INFO con;
+    HANDLE hcon = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (hcon != INVALID_HANDLE_VALUE &&
+        GetConsoleScreenBufferInfo(hcon,&con))
+    {
+        DWORD read = 0;
+        if (!ReadConsoleOutputCharacterA(hcon,&c,1,
+            con.dwCursorPosition,&read) || read != 1
+            )
+            c = '\0';
+    }
+    return c;
+}
+void color(int a){
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),a);
+    };
+
+
+
